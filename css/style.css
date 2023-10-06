@@ -1,3 +1,48 @@
 body{
-    background-color: cyan;
+    background-color: #ffff
+
+}
+
+body header h1 {
+    text-align: center;
+
+}
+
+body header nav a {
+    text-align: center;
+}
+body header nav input {
+    text-align: right;
+}
+
+body header nav p {
+    text-align: right;
+}
+
+body header div {
+    text-align: center;
+}
+
+body header #finn-sko {
+    float: left;
+}
+
+body header #handlekurv {
+    float: right;
+    
+}
+
+body main h2 {
+    text-align: center;
+}
+
+body footer a {
+    position:absolute; bottom: 0;
+    text-align: left;
+    
+}
+
+body footer p {
+    position:absolute; bottom: 0;
+    text-align: right;
 }
