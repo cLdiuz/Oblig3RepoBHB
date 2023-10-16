@@ -5,6 +5,43 @@
 html{
     font-size: calc(1em + 1vw);
     height: 100%
+    
+}
+#grid-container{
+    
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 70px 1fr 70px;
+    grid-template-areas:    "header"
+                            "hamb-menu"
+                            "main"
+                            "footer";
+                            
+   flex:1;
+ /* - Spurte ChatGPT om hvordan jeg fikk footer raden til å holde seg i bunnen: La til flex:1; på #grid-container id'en */
+}
+
+body header{
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+body section {
+    grid-row-start:2;
+    grid-row-end:3;
+}
+
+
+body main {
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+body footer {
+    display:flex;
+    justify-content: space-between;
+    height: 50px;
+    grid-row-start: 4;
+    grid-row-end: 4;
+
 }
 
 #logo {
@@ -24,58 +61,59 @@ body {
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     min-height:100vh
+    
+    
 } 
     
-header {
+body header {
     display: flex;
     justify-content: space-between;
-    background-color: red;
+    background-color: #bcecdf;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-
-}
-section {
-    background-color: rgb(32, 181, 231);
-}
-
-
-
-
-footer {
-    height:100%;
-    background-color: rgb(32, 181, 231) ;
-}
-
-
-#grid-container{
     
-    display:grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 70px 1fr 70px;
-    grid-template-areas:    "header"
-                            "hamb-menu"
-                            "main"
-                            "footer";
-                            
-   flex:1;
- /* - Spurte ChatGPT om hvordan jeg fikk footer raden til å holde seg i bunnen: La til flex:1; på #grid-container id'en */
+
 }
 
-header{
-    grid-row-start: 1;
-    grid-row-end: 2;
-}
 body section {
-    grid-row-start:2;
-    grid-row-end:3;
+    background-color: #bcecdf;
+    border:solid;
 }
-
-section nav {
+body section nav {
     display:flex;
     justify-content:space-between
     
 }
+
+body main  {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #bcecdf;
+    
+}
+
+body main article img {
+    display:flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    max-height: 100%;
+
+    padding: 1rem;
+}
+
+
+body footer {
+    height: 100%;
+    background-color: #bcecdf;
+    border:solid;
+}
+
+
+
+
+
 #hamburger {
     position: absolute;
     top: 105px;
@@ -86,22 +124,6 @@ section nav {
     top:100px;
     right:10px;
 }
-
-main {
-    grid-row-start: 3;
-    grid-row-end: 4;
-}
-footer {
-    display:flex;
-    justify-content: space-between;
-    height: 50px;
-    grid-row-start: 4;
-    grid-row-end: 4;
-
-}
-
-
-
 
 
 
