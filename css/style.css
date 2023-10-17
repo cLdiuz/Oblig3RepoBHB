@@ -21,7 +21,7 @@ html{
  /* - Spurte ChatGPT om hvordan jeg fikk footer raden til å holde seg i bunnen: La til flex:1; på #grid-container id'en */
 }
 
-body header{
+body header {
     grid-row-start: 1;
     grid-row-end: 2;
 }
