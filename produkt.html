@@ -3,36 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+    <link href="css/font/css/fontawesome.css" rel="stylesheet">
+    <link href="css/font/css/brands.css" rel="stylesheet">
+    <link href="css/font/css/solid.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style2.css" type="text/css">
     <title>Produkt</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css">
+
 </head>
 <body>
     <div id="grid-container">
     <header>
-        <span>
-            <a href="index.html" id="logo">RaskeSko.no</a>
-        </span>
-            <nav id="nav-menu">
-                <a href="index.html">Hjem</a>
-                <label id="search">Søk: <input type="text" placeholder="Søk"></label> 
-            </nav>
 
-    </header>
         <section>
-            <nav>
-                <a id="hamburger" href="produkt.html"> <img src="img/Ham-menu.png"></a>
-                <img id="cart" src="img/shop-cart.png">
-            </nav>
+            <h1>RaskeSko.no</h1>
+            <i class="fa-solid fa-shoe-prints"></i>
+         </section>
+        <nav>
+            <i id="ham" class="fa-solid fa-bars"></i>
+            <section>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <label id="search"><input type="text" placeholder="Søk på sko"></label> 
+            </section>
+    
+            <ul class="navi-bar">
+                <li><a href="index2.html">Hjem</a></li>
+                <li><a href="produkt.html">Finn sko</a></li>
+                <li><a href="kontakt-oss">Kontakt oss</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Finn din perfekte sko!</h2>
+        <section id="prod-section">
+            <article>
+                <h3>Hvit joggesko</h3>
+                <img src="img/shoe-placeholder.jpg" alt="Hvit sko bilde">
+                <p>Nyeste modell av Mike joggesko!</p>
+            </article>
+            <article>
+                <h3>Hvit joggesko</h3>
+                <img src="img/shoe-placeholder.jpg" alt="Hvit sko bilde">
+                <p>Nyeste modell av Mike joggesko!</p>
+            </article>
+            <article>
+                <h3>Hvit joggesko</h3>
+                <img src="img/shoe-placeholder.jpg" alt="Hvit sko bilde">
+                <p>Nyeste modell av Mike joggesko!</p>
+            </article>
         </section>
-            <main>  
-                <h1>Valgte sko</h1>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="kontakt-oss">Kontakt oss</a></li>
+            <li><a href="#">Om oss</a></li>
+        </ul>
+    </footer>
+    </div>
+    <script>
+        let x = document.querySelector(".navi-bar")
 
-            </main>
-            <footer>
-                <h3>Om oss</h3><h3> <a href="kontakt-oss.html">Kontakt oss</a></h3>
-            </footer>
-       
-
-</div>
+        document.getElementById("ham").addEventListener("click", (e) =>{
+            if (x.className === "navi-bar") {
+                x.className += " responsive";
+            } else {
+                x.className = "navi-bar"
+               
+            }
+        })
+    </script>
 </body>
 </html>
