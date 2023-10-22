@@ -1,64 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
-    <link href="css/font/css/fontawesome.css" rel="stylesheet">
-    <link href="css/font/css/brands.css" rel="stylesheet">
-    <link href="css/font/css/solid.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style2.css" type="text/css">
-    <title>Raskesko.no</title>
-</head>
-<body>
-    <div id="grid-container">
-    <header>
-
-        <section>
-            <h1>RaskeSko.no</h1>
-            <i class="fa-solid fa-shoe-prints"></i>
-         </section>
-        <nav>
-            <i id="ham" class="fa-solid fa-bars"></i>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" type="text/css">
+        <link href="css/font/css/fontawesome.css" rel="stylesheet">
+        <link href="css/font/css/brands.css" rel="stylesheet">
+        <link href="css/font/css/solid.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/style2.css" type="text/css">
+        <title>Raskesko.no</title>
+    </head>
+    <body>
+        <div id="grid-container">
+        <header>
             <section>
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <label id="search"><input type="text" placeholder="Søk på sko"></label> 
+                <h1>RaskeSko.no</h1>
             </section>
-    
-            <ul class="navi-bar">
-                <li><a href="index2.html">Hjem</a></li>
-                <li><a href="produkt.html">Finn sko</a></li>
-                <li><a href="kontakt-oss">Kontakt oss</a></li>
+            <nav>
+                <i id="ham" class="fa-solid fa-bars"></i>
+                <div>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <label id="search"><input type="text" placeholder="Søk på sko"></label> 
+                </div>
+        
+                <ul class="navi-bar">
+                    <li><a href="index2.html">Hjem</a></li>
+                    <li><a href="produkt.html">Finn sko</a></li>
+                    <li><a href="kontakt-oss.html">Kontakt oss</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h2>Velkommen til RaskeSko.no!</h2>
+                <article>
+                    <h3>En skobutikk som selger raske sko på en rask og enkel måte!</h3>
+                    <img src="img/feet-1840619_1280.jpg" alt="Index-sko">
+                </article>
+            </section>
+        </main>
+        <footer>
+            <ul>
+                <li><a href="kontakt-oss.html">Kontakt oss</a></li>
+                <li><a href="#">Om oss</a></li>
             </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Velkommen til RaskeSko.no!</h2>
-            <article>
-                <h3>En skobutikk som selger raske sko på en rask og enkel måte!</h3>
-                <img src="img/shoe-placeholder.jpg" alt="Hvit sko bilde">
-            </article>
-        </section>
-    </main>
-    <footer>
-        <ul>
-            <li><a href="kontakt-oss">Kontakt oss</a></li>
-            <li><a href="#">Om oss</a></li>
-        </ul>
-    </footer>
-    </div>
-    <script>
-        let x = document.querySelector(".navi-bar")
+        </footer>
+        </div>
+        <script>
+            let x = document.querySelector(".navi-bar")
 
-        document.getElementById("ham").addEventListener("click", (e) =>{
-            if (x.className === "navi-bar") {
-                x.className += " responsive";
-            } else {
-                x.className = "navi-bar"
-               
-            }
-        })
-    </script>
-</body>
-</html> 
+            document.getElementById("ham").addEventListener("click", (e) =>{
+                if (x.className === "navi-bar") {
+                    x.className += " responsive";
+                } else {
+                    x.className = "navi-bar"
+                
+                }
+            })
+            window.addEventListener('resize', function() {
+                const navbar = document.querySelector('.navi-bar');
+                navbar.classList.remove('responsive');
+                })
+        </script>
+    </body>
+    </html> 

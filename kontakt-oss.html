@@ -14,22 +14,20 @@
 <body>
     <div id="grid-container">
     <header>
-
         <section>
-            <h1>RaskeSko.no</h1>
-            <i class="fa-solid fa-shoe-prints"></i>
+            <h1>RaskeSko.no</h1>  
          </section>
         <nav>
             <i id="ham" class="fa-solid fa-bars"></i>
-            <section>
+            <div>
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <label id="search"><input type="text" placeholder="Søk på sko"></label> 
-            </section>
+            </div>
     
             <ul class="navi-bar">
                 <li><a href="index2.html">Hjem</a></li>
                 <li><a href="produkt.html">Finn sko</a></li>
-                <li><a href="kontakt-oss">Kontakt oss</a></li>
+                <li><a href="kontakt-oss.html">Kontakt oss</a></li>
             </ul>
         </nav>
     </header>
@@ -37,14 +35,17 @@
         <section>
             <h2>Velkommen til RaskeSko.no!</h2>
             <article>
-                <h3>En skobutikk som selger raske sko på en rask og enkel måte!</h3>
-                <img src="img/shoe-placeholder.jpg" alt="Hvit sko bilde">
+                <h3>Kontaktinformasjon RaskeSko.no</h3>
+                <p>Firmanavn: RaskeSko.no</p>
+                <p>Adresse: Skoveien 99</p>
+                <p>1999 Skoland</p>
+                <p>Telefon: 99 99 99 99(8-16)</p>
             </article>
         </section>
     </main>
     <footer>
         <ul>
-            <li><a href="kontakt-oss">Kontakt oss</a></li>
+            <li><a href="kontakt-oss.html">Kontakt oss</a></li>
             <li><a href="#">Om oss</a></li>
         </ul>
     </footer>
@@ -60,6 +61,10 @@
                
             }
         })
+        window.addEventListener('resize', function() {
+            const navbar = document.querySelector('.navi-bar');
+            navbar.classList.remove('responsive');
+            })
     </script>
 </body>
 </html>
